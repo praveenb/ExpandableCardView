@@ -7,9 +7,9 @@ apply plugin: 'com.github.dcendents.android-maven'
 group='com.github.praveenb'
 
 ext {
-    PUBLISH_GROUP_ID = 'com.alespero'
-    PUBLISH_ARTIFACT_ID = 'expandable-cardview'
-    PUBLISH_VERSION = '0.7'
+    PUBLISH_GROUP_ID = 'com.github.praveenb'
+    PUBLISH_ARTIFACT_ID = 'expandable-cardview-pb'
+    PUBLISH_VERSION = '0.9'
 }
 
 android {
@@ -18,8 +18,8 @@ android {
     defaultConfig {
         minSdkVersion 18
         targetSdkVersion 28
-        versionCode 3
-        versionName "0.7"
+        versionCode 9
+        versionName "0.9"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
