@@ -6,20 +6,14 @@ apply plugin: 'com.github.dcendents.android-maven'
 
 group='com.github.praveenb'
 
-ext {
-    PUBLISH_GROUP_ID = 'com.github.praveenb'
-    PUBLISH_ARTIFACT_ID = 'expandable-cardview-pb'
-    PUBLISH_VERSION = '0.9'
-}
-
 android {
     compileSdkVersion 28
 
     defaultConfig {
         minSdkVersion 18
         targetSdkVersion 28
-        versionCode 9
-        versionName "0.9"
+        versionCode 10
+        versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
