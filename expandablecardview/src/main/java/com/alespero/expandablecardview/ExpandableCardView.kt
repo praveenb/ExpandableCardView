@@ -3,6 +3,7 @@ package com.alespero.expandablecardview
 
 import android.content.Context
 import android.content.res.TypedArray
+import android.graphics.Color
 import android.graphics.drawable.Drawable
 import android.os.Build
 import androidx.core.content.ContextCompat
@@ -46,17 +47,20 @@ import kotlinx.android.synthetic.main.expandable_cardview.view.*
 class ExpandableCardView @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : LinearLayout(context, attrs, defStyleAttr) {
 
     private var title: String? = null
+    private var subTitle: String? = null
 
     private var innerView: View? = null
 
     private var typedArray: TypedArray? = null
     private var innerViewRes: Int = 0
+    private var titleColor: Int = 0
+    private var subTitleColor: Int = 0
     private var iconDrawable: Drawable? = null
 
     var animDuration = DEFAULT_ANIM_DURATION.toLong()
 
     var isExpanded = false
-        private set
+
     private var isExpanding = false
     private var isCollapsing = false
     private var expandOnClick = false
@@ -94,6 +98,9 @@ class ExpandableCardView @JvmOverloads constructor(context: Context, attrs: Attr
         val typedArray = context.obtainStyledAttributes(attrs, R.styleable.ExpandableCardView)
         this@ExpandableCardView.typedArray = typedArray
         title = typedArray.getString(R.styleable.ExpandableCardView_title)
+        subTitle = typedArray.getString(R.styleable.ExpandableCardView_subTitle)
+        titleColor = typedArray.getColor(R.styleable.ExpandableCardView_titleColor,Color.BLACK)
+        subTitleColor = typedArray.getColor(R.styleable.ExpandableCardView_subTitleColor,Color.BLACK)
         iconDrawable = typedArray.getDrawable(R.styleable.ExpandableCardView_icon)
         innerViewRes = typedArray.getResourceId(R.styleable.ExpandableCardView_inner_view, View.NO_ID)
         expandOnClick = typedArray.getBoolean(R.styleable.ExpandableCardView_expandOnClick, false)
@@ -107,10 +114,14 @@ class ExpandableCardView @JvmOverloads constructor(context: Context, attrs: Attr
 
         //Setting attributes
         if (! TextUtils.isEmpty(title)) card_title.text = title
+        if (! TextUtils.isEmpty(subTitle)) card_subtitle.text = subTitle
+
+        card_title.setTextColor(titleColor)
+        card_subtitle.setTextColor(subTitleColor)
 
         iconDrawable?.let { drawable ->
             card_header.visibility = View.VISIBLE
-            card_icon.background = drawable
+            card_icon.setImageDrawable(drawable)
         }
 
         setInnerView(innerViewRes)

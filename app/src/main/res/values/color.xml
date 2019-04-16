@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingDefaultResource">
+
+    <color name="colorPrimary">#1B37A5</color>
+    <color name="colorPrimaryDark">#1C339B</color>
+    <color name="colorAccent">#1976d2</color>
+
+    <color name="at_tab_color_selected">#098a9b</color>
+    <color name="at_tab_color">#4b5759</color>
+</resources>

@@ -2,10 +2,14 @@
 <resources>
     <declare-styleable name="ExpandableCardView">
         <attr name="title" format="string"/>
+        <attr name="subTitle" format="string"/>
         <attr name="icon" format="reference"/>
         <attr name="inner_view" format="reference"/>
         <attr name="expandOnClick" format="boolean"/>
         <attr name="animationDuration" format="integer"/>
         <attr name="startExpanded" format="boolean"/>
+        <attr name="titleColor" format="reference"/>
+        <attr name="subTitleColor" format="reference"/>
+
     </declare-styleable>
 </resources>
