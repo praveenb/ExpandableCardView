@@ -12,14 +12,14 @@
     <LinearLayout
         android:id="@+id/card_container"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="90dp"
         android:gravity="center_vertical"
         android:orientation="vertical">
 
         <RelativeLayout
             android:id="@+id/card_header"
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="90dp"
             android:paddingTop="@dimen/default_vertical_padding"
             android:paddingBottom="@dimen/default_vertical_padding">
 
