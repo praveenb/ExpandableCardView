@@ -20,7 +20,8 @@
             android:id="@+id/card_header"
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:padding="10dp">
+            android:paddingTop="@dimen/default_vertical_padding"
+            android:paddingBottom="@dimen/default_vertical_padding">
 
             <!-- Rivedi effetto ripple -->
 
@@ -28,7 +29,7 @@
                 android:id="@+id/card_icon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
+                android:layout_marginStart="5dp"
                 android:contentDescription="@string/expandable_card_view_icon_content_description"
                 android:visibility="gone" />
 
@@ -36,7 +37,7 @@
                 android:id="@+id/card_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="0dp"
+                android:layout_marginStart="5dp"
                 android:layout_toStartOf="@+id/card_arrow"
                 android:layout_toEndOf="@+id/card_icon"
                 android:maxLength="39"
@@ -48,7 +49,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_below="@+id/card_title"
-                android:layout_marginStart="0dp"
+                android:layout_marginStart="5dp"
                 android:layout_marginTop="5dp"
                 android:layout_toStartOf="@+id/card_arrow"
                 android:layout_toEndOf="@+id/card_icon"

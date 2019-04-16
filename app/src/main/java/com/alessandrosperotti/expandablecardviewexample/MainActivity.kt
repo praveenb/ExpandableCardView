@@ -32,6 +32,8 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        //main_profile_card.setIcon(R.drawable.amazon_app3)
+
         main_profile_card.setOnExpandedListener { _, isExpanded ->
             if(isExpanded) Toast.makeText(applicationContext, "Expanded!", Toast.LENGTH_SHORT).show()
             else Toast.makeText(applicationContext, "Collapsed!", Toast.LENGTH_SHORT).show()

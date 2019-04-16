@@ -120,7 +120,7 @@ class ExpandableCardView @JvmOverloads constructor(context: Context, attrs: Attr
         card_subtitle.setTextColor(subTitleColor)
 
         iconDrawable?.let { drawable ->
-            card_header.visibility = View.VISIBLE
+            card_icon.visibility = View.VISIBLE
             card_icon.setImageDrawable(drawable)
         }
 
@@ -249,9 +249,10 @@ class ExpandableCardView @JvmOverloads constructor(context: Context, attrs: Attr
     }
 
     fun setIcon(@DrawableRes drawableRes: Int = -1, drawable: Drawable? = null) {
+        card_icon.visibility = View.VISIBLE
         if (drawableRes != -1) {
             iconDrawable = ContextCompat.getDrawable(context, drawableRes)
-            card_icon.background = iconDrawable
+            card_icon.setImageResource( drawableRes)
         } else {
             card_icon.background = drawable
             iconDrawable = drawable
